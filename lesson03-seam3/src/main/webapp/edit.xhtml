@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:s="http://jboss.org/seam/faces"
+	template="/WEB-INF/templates/default.xhtml">
+	
+	<!-- 
+	<ui:define name="header">
+		<f:metadata>
+        	<f:viewParam name="id" value="#{_storeid}"/>
+            <s:viewAction action="#{storeAction.selectCakeStore(_storeId)}"/>
+        </f:metadata>
+	</ui:define>
+	-->
+	<ui:define name="content">
+		<h:form>
+			<h1><h:inputText value="#{cakeStore.name}"/></h1>
+			<p><h:inputText value="#{cakeStore.address}"/></p>
+			<h:dataTable value="#{cakeStore.cakes}" var="_cake">
+			
+				<h:column>
+					<f:facet name="header">Name</f:facet>
+                	<h:inputText value="#{_cake.name}"/>
+            	</h:column>
+            
+	            <h:column>
+            		<f:facet name="header">Price</f:facet>
+                	<h:inputText value="#{_cake.price}"/>
+            	</h:column>
+            
+	            <h:column>
+            		<f:facet name="header">Ingredients</f:facet>
+            		<h:dataTable value="#{_cake.ingredients}" var="_ingredient">
+	            		#{_ingredient}
+            		</h:dataTable>
+            	</h:column>
+			</h:dataTable>
+			
+			<h:commandButton action="#{storeAction.save}" value="Save"/> 
+		</h:form>
+	</ui:define>
+</ui:composition>

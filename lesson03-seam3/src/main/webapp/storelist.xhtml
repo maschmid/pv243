@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h1>Cake Stores</h1>
+		
+		<h:form>
+			<h:dataTable value="#{cakeStores}" var="_store">
+			
+				<h:column>
+					<f:facet name="header">Cake Store</f:facet>
+                	<h3>
+	                	<h:commandLink value="#{_store.name}" action="#{storeList.viewStore(_store)}">
+                			<f:setPropertyActionListener target="#{currentCakeStoreProducer.cakeStore}" value="#{_store}"/>
+                		</h:commandLink>                	
+                	</h3>
+                	<p>#{_store.address}</p>
+            	</h:column>
+            
+            	<h:column>
+            		<h:commandButton value="Edit" action="#{storeList.editStore(_store)}">
+                		<f:setPropertyActionListener target="#{currentCakeStoreProducer.cakeStore}" value="#{_store}"/>
+                	</h:commandButton>
+            	</h:column>
+			</h:dataTable>
+			
+		</h:form>
+	</ui:define>
+</ui:composition>
