@@ -25,6 +25,14 @@ public class StoreAction {
 	@Inject
 	Conversation conversation;
 	
+	public void edit() {
+		conversation.begin();
+	}
+	
+	public String view() {
+		return "view";
+	}
+	
 	public String save() {
 		conversation.end();
 		return "storelist";

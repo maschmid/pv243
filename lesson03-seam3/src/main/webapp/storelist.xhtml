@@ -13,17 +13,32 @@
 				<h:column>
 					<f:facet name="header">Cake Store</f:facet>
                 	<h3>
-	                	<h:commandLink value="#{_store.name}" action="#{storeList.viewStore(_store)}">
+               			
+               			<h:commandLink value="#{_store.name}" action="#{storeAction.view}">
                 			<f:setPropertyActionListener target="#{currentCakeStoreProducer.cakeStore}" value="#{_store}"/>
-                		</h:commandLink>                	
+                		</h:commandLink>
+                		
+                		<!-- 
+                		<h:link value="#{_store.name}" outcome="view">
+                			<f:param name="id" value="#{_store.id}"/>
+                		</h:link>
+                		-->
+                		                	
                 	</h3>
                 	<p>#{_store.address}</p>
             	</h:column>
             
             	<h:column>
-            		<h:commandButton value="Edit" action="#{storeList.editStore(_store)}">
+
+            		<h:commandButton value="Edit" action="#{storeAction.edit}">
                 		<f:setPropertyActionListener target="#{currentCakeStoreProducer.cakeStore}" value="#{_store}"/>
                 	</h:commandButton>
+                	
+                	<!-- 
+                	<h:link value="#{_store.name}" outcome="edit">
+                		<f:param name="id" value="#{_store.id}"/>
+                	</h:link>
+                	-->
             	</h:column>
 			</h:dataTable>
 			

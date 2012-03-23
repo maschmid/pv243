@@ -6,14 +6,16 @@
 	xmlns:s="http://jboss.org/seam/faces"
 	template="/WEB-INF/templates/default.xhtml">
 	
-	<!-- 
+	
 	<ui:define name="header">
 		<f:metadata>
         	<f:viewParam name="id" value="#{_storeid}"/>
-            <s:viewAction action="#{storeAction.selectCakeStore(_storeId)}"/>
+            <s:viewAction action="#{storeAction.edit}">
+            	<f:setPropertyActionListener target="#{currentCakeStoreProducer.cakeStoreById}" value="#{_storeid}"/>
+            </s:viewAction>
         </f:metadata>
 	</ui:define>
-	-->
+	
 	<ui:define name="content">
 		<h:form>
 			<h1><h:inputText value="#{cakeStore.name}"/></h1>

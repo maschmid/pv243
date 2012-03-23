@@ -3,7 +3,7 @@
    <modelVersion>4.0.0</modelVersion>
 
    <groupId>cz.muni.fi.pv243.lesson03</groupId>
-   <artifactId>lesson03-seam3</artifactId>
+   <artifactId>lesson03</artifactId>
    <version>0.0.1-SNAPSHOT</version>
    <packaging>war</packaging>
    <name>PV243 Lesson 03</name>
@@ -13,6 +13,7 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <javaee6.web.spec.version>2.0.0.Final</javaee6.web.spec.version>
       <jbossas.version>7.1.1.Final</jbossas.version>
+      <seam.version>3.1.0.Final</seam.version>
    </properties>
 
    <dependencyManagement>
@@ -29,6 +30,15 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>org.jboss.seam</groupId>
+            <artifactId>seam-bom</artifactId>
+            <version>${seam.version}</version>
+            <scope>import</scope>
+            <type>pom</type>
+         </dependency>
+        
       </dependencies>
    </dependencyManagement>
 
@@ -113,20 +123,22 @@
       <dependency>
       	 <groupId>org.jboss.seam.faces</groupId>
       	 <artifactId>seam-faces</artifactId>
-      	 <version>3.1.0.Final</version>
       </dependency>
       
       <dependency>
       	 <groupId>org.jboss.seam.international</groupId>
       	 <artifactId>seam-international</artifactId>
-      	 <version>3.1.0.Final</version>
       </dependency>
            
             
       <dependency>
       	<groupId>org.jboss.seam.persistence</groupId>
       	<artifactId>seam-persistence</artifactId>
-      	<version>3.1.0.Final</version>
+      </dependency>
+      
+      <dependency>
+         <groupId>com.ocpsoft</groupId>
+         <artifactId>prettyfaces-jsf2</artifactId>
       </dependency>
 
    </dependencies>

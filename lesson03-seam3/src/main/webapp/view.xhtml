@@ -5,14 +5,13 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:s="http://jboss.org/seam/faces"
 	template="/WEB-INF/templates/default.xhtml">
-	<!-- 
+	
 	<ui:define name="header">
 		<f:metadata>
         	<f:viewParam name="id" value="#{_storeid}"/>
-            <s:viewAction action="#{storeAction.selectCakeStore(_storeid)}"/>
+            <s:viewAction action="#{currentCakeStoreProducer.setCakeStoreById(_storeid)}"/>
         </f:metadata>
 	</ui:define>
-	-->
 	
 	<ui:define name="content">
 		<h1>#{cakeStore.name}</h1>

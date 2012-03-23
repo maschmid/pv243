@@ -31,19 +31,16 @@ public class StoreList {
 	@Inject
 	CurrentCakeStoreProducer currentCakeStoreProducer;
 	
-	@Inject
-	Conversation conversation;
-
+	
 	@Produces
     @Model
-	// @Named
     public List<CakeStore> getCakeStores() {
         return em.createQuery("select store from CakeStore store order by store.name", CakeStore.class)
                 .getResultList();
     }
-	
+/*	
 	public String viewStore(CakeStore store) {
-		currentCakeStoreProducer.setCakeStore(store);
+		currentCakeStoreProducer.setCakeStore(store);		
 		return "view";
 	}
 	
@@ -51,5 +48,5 @@ public class StoreList {
 		currentCakeStoreProducer.setCakeStore(store);
 		conversation.begin();
 		return "edit";
-	}
+	}*/
 }
