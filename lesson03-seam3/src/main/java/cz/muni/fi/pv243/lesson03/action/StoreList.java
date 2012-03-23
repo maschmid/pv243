@@ -19,7 +19,7 @@ import cz.muni.fi.pv243.lesson03.model.CakeStore;
 
 @Stateless
 //@Stateful
-//@RequestScoped
+// @RequestScoped
 @Named
 public class StoreList {
 

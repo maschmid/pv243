@@ -23,6 +23,7 @@ public class CurrentCakeStoreProducer implements Serializable {
 	private CakeStore cakeStore;
 	
 	@Inject
+	// @PersistenceContext
 	EntityManager em;
 	
 	public void setCakeStore(CakeStore cakeStore) {

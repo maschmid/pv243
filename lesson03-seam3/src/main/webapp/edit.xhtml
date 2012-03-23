@@ -10,9 +10,7 @@
 	<ui:define name="header">
 		<f:metadata>
         	<f:viewParam name="id" value="#{_storeid}"/>
-            <s:viewAction action="#{storeAction.edit}">
-            	<f:setPropertyActionListener target="#{currentCakeStoreProducer.cakeStoreById}" value="#{_storeid}"/>
-            </s:viewAction>
+            <s:viewAction action="#{storeAction.edit(_storeid)}"/>
         </f:metadata>
 	</ui:define>
 	

@@ -136,11 +136,12 @@
       	<artifactId>seam-persistence</artifactId>
       </dependency>
       
+      <!-- 
       <dependency>
          <groupId>com.ocpsoft</groupId>
          <artifactId>prettyfaces-jsf2</artifactId>
       </dependency>
-
+-->
    </dependencies>
 
    <build>

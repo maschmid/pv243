@@ -11,6 +11,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 
+import org.jboss.seam.transaction.Transactional;
+
 import cz.muni.fi.pv243.lesson03.model.CakeStore;
 
 @Named
@@ -18,14 +20,18 @@ import cz.muni.fi.pv243.lesson03.model.CakeStore;
 public class StoreAction {
 	
 	// @PersistenceContext(type=PersistenceContextType.EXTENDED)
-	// @PersistenceContext
-	@Inject
+	@PersistenceContext
+	// @Inject
 	private EntityManager em;
 	
 	@Inject
 	Conversation conversation;
 	
-	public void edit() {
+	@Inject
+	CurrentCakeStoreProducer currentCakeStoreProducer;
+	
+	public void edit(String cakeStoreId) {
+		currentCakeStoreProducer.setCakeStoreById(cakeStoreId);
 		conversation.begin();
 	}
 	
@@ -33,6 +39,7 @@ public class StoreAction {
 		return "view";
 	}
 	
+	// @Transactional
 	public String save() {
 		conversation.end();
 		return "storelist";

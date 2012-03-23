@@ -7,16 +7,24 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Singleton
 @Startup
 public class DemoInitializer {
+	
+	//@Inject
 	@PersistenceContext
 	private EntityManager em;
+	
+	/*@Inject
+	@DefaultTransaction
+	SeamTransaction transaction;*/
+	
 
-	@PostConstruct
+    @PostConstruct
 	public void initialize() {
 		
 		List<Cake> cakes = new LinkedList<Cake>();
@@ -54,4 +62,5 @@ public class DemoInitializer {
 		store.setCakes(cakes);
 		em.persist(store);
 	}
+	
 }
