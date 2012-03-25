@@ -26,10 +26,8 @@ public interface Pages {
 		@AccessDeniedView("/denied.xhtml")
         @ViewPattern("/edit.xhtml")
 		@RestrictAtPhase({PhaseIdType.RESTORE_VIEW, PhaseIdType.INVOKE_APPLICATION})
-		@FacesRedirect
         EDIT,
         
-        @FacesRedirect
         @ViewPattern("/bakerylist.xhtml")
         BAKERYLIST,
         

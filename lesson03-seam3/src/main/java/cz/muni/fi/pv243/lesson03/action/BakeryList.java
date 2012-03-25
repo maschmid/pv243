@@ -18,13 +18,9 @@ import javax.persistence.PersistenceContextType;
 import cz.muni.fi.pv243.lesson03.model.Bakery;
 
 @Stateless
-//@Stateful
-// @RequestScoped
 @Named
 public class BakeryList {
 
-	// @PersistenceContext
-	// @PersistenceContext(type=PersistenceContextType.EXTENDED)
 	@Inject
 	private EntityManager em;
 	

@@ -19,17 +19,16 @@ import org.jboss.seam.persistence.FlushModeType;
 @Startup
 public class DemoInitializer
 {
-
    @PersistenceContext
    private EntityManager em;
    
    @Inject
-   private FlushModeManager manager;
-
+   FlushModeManager flushModeManager;
+   
    @PostConstruct
    public void initialize()
    {
-      manager.setFlushModeType(FlushModeType.MANUAL);
+      flushModeManager.setFlushModeType(FlushModeType.MANUAL);
       
       Manager admin = new Manager("admin", "admin", true);
       em.persist(admin);
@@ -75,5 +74,4 @@ public class DemoInitializer
       store.setCakes(cakes);
       em.persist(store);
    }
-
 }

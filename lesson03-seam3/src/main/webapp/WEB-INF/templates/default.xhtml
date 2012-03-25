@@ -81,8 +81,8 @@
                 </ui:insert>
       </div>
       <div id="footer">
+         <p><h:outputText value="Transient: #{javax.enterprise.context.conversation.isTransient()} Id: #{javax.enterprise.context.conversation.id}" /></p>
          <h:graphicImage value="/resources/gfx/logo.png" alt="Weld logo" />
-         <p>Flush mode is #{bakeryAction.delegate.flushMode} </p>
          <p>
             This project was generated from a Maven archetype from
             JBoss.<br />

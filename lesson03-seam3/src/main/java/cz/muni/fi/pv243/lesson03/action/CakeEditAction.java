@@ -28,7 +28,5 @@ public class CakeEditAction
    
    public void addIngredient(String ingredient) {
       cake.getIngredients().add(ingredient);
-      
- //      log.info("flush mode: " + (em.getFlushMode().toString()));
    }
 }

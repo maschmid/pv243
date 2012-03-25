@@ -25,10 +25,6 @@ public class ManagerAuthorization
          return false;
       }
       
-      if (((Manager)identity.getUser()).isAdmin()) {
-         return true;
-      }
-      
       return identity.getUser().getId().equals(bakery.getManager().getId());
    }
 }
