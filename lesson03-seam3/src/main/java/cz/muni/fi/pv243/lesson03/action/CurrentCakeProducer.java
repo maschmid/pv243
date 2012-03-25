@@ -12,6 +12,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 
 import cz.muni.fi.pv243.lesson03.model.Bakery;
+import cz.muni.fi.pv243.lesson03.model.Cake;
 
 import java.io.Serializable;
 import java.util.List;
@@ -19,25 +20,21 @@ import java.util.List;
 @ConversationScoped
 @Named
 @Stateful
-public class CurrentBakeryProducer implements Serializable {
+public class CurrentCakeProducer implements Serializable {
 	
-	private Bakery bakery;
+	private Cake cake;
 	
 	@Inject
 	EntityManager em;
 	
-	public void setBakery(Bakery bakery) {
-		this.bakery = bakery;
-	}
-	
-	public void setBakeryById(String bakeryId) {
-		this.bakery = em.find(Bakery.class, Long.parseLong(bakeryId));
+	public void setCake(Cake cake) {
+		this.cake = cake;
 	}
 	
 	@Named
 	@Produces
 	@Current
-	public Bakery getBakery() {
-		return bakery;
+	public Cake getCake() {
+		return cake;
 	}
 }

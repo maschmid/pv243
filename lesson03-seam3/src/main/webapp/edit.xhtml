@@ -28,8 +28,16 @@
 	            <h:column>
             		<f:facet name="header">Ingredients</f:facet>
             		<h:dataTable value="#{_cake.ingredients}" var="_ingredient">
+            		  <h:column>
 	            		#{_ingredient}
+	                   </h:column>
             		</h:dataTable>
+            	</h:column>
+            	
+            	<h:column>
+            	   <h:commandButton action="editcake" value="Edit Cake">
+            	       <f:setPropertyActionListener target="#{currentCakeProducer.cake}" value="#{_cake}"/>
+            	   </h:commandButton>
             	</h:column>
 			</h:dataTable>
 			
