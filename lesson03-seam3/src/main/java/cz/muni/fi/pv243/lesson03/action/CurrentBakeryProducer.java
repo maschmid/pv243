@@ -2,6 +2,7 @@ package cz.muni.fi.pv243.lesson03.action;
 
 import javax.ejb.Stateful;
 import javax.enterprise.context.ConversationScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Model;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
@@ -10,34 +11,35 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 
-import cz.muni.fi.pv243.lesson03.model.CakeStore;
+import cz.muni.fi.pv243.lesson03.model.Bakery;
 
 import java.io.Serializable;
 import java.util.List;
 
 @ConversationScoped
+// @SessionScoped
 @Named
 @Stateful
-public class CurrentCakeStoreProducer implements Serializable {
+public class CurrentBakeryProducer implements Serializable {
 	
-	private CakeStore cakeStore;
+	private Bakery bakery;
 	
 	@Inject
 	// @PersistenceContext
 	EntityManager em;
 	
-	public void setCakeStore(CakeStore cakeStore) {
-		this.cakeStore = cakeStore;
+	public void setBakery(Bakery bakery) {
+		this.bakery = bakery;
 	}
 	
-	public void setCakeStoreById(String cakeStoreId) {
-		this.cakeStore = em.find(CakeStore.class, Long.parseLong(cakeStoreId));
+	public void setBakeryById(String bakeryId) {
+		this.bakery = em.find(Bakery.class, Long.parseLong(bakeryId));
 	}
 	
 	@Named
 	@Produces
 	@Current
-	public CakeStore getCakeStore() {
-		return cakeStore;
+	public Bakery getBakery() {
+		return bakery;
 	}
 }

@@ -15,13 +15,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 
-import cz.muni.fi.pv243.lesson03.model.CakeStore;
+import cz.muni.fi.pv243.lesson03.model.Bakery;
 
 @Stateless
 //@Stateful
 // @RequestScoped
 @Named
-public class StoreList {
+public class BakeryList {
 
 	// @PersistenceContext
 	// @PersistenceContext(type=PersistenceContextType.EXTENDED)
@@ -29,24 +29,12 @@ public class StoreList {
 	private EntityManager em;
 	
 	@Inject
-	CurrentCakeStoreProducer currentCakeStoreProducer;
-	
+	CurrentBakeryProducer currentCakeStoreProducer;
 	
 	@Produces
     @Model
-    public List<CakeStore> getCakeStores() {
-        return em.createQuery("select store from CakeStore store order by store.name", CakeStore.class)
+    public List<Bakery> getBakeries() {
+        return em.createQuery("select b from Bakery b order by b.name", Bakery.class)
                 .getResultList();
     }
-/*	
-	public String viewStore(CakeStore store) {
-		currentCakeStoreProducer.setCakeStore(store);		
-		return "view";
-	}
-	
-	public String editStore(CakeStore store) {
-		currentCakeStoreProducer.setCakeStore(store);
-		conversation.begin();
-		return "edit";
-	}*/
 }

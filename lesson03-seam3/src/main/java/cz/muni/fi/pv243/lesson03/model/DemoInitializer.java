@@ -13,54 +13,58 @@ import javax.persistence.PersistenceContext;
 
 @Singleton
 @Startup
-public class DemoInitializer {
-	
-	//@Inject
-	@PersistenceContext
-	private EntityManager em;
-	
-	/*@Inject
-	@DefaultTransaction
-	SeamTransaction transaction;*/
-	
+public class DemoInitializer
+{
 
-    @PostConstruct
-	public void initialize() {
-		
-		List<Cake> cakes = new LinkedList<Cake>();
-		Cake cake = new Cake("Strawberry Paradise", BigDecimal.valueOf(19990, 2), "white flavor", "strawberry filling", "lemon icing");
-		em.persist(cake);
-		cakes.add(cake);
-		
-		cake = new Cake("Chocolate Dream", BigDecimal.valueOf(29990, 2), "chocolate");
-		em.persist(cake);
-		cakes.add(cake);
-		
-		cake = new Cake("Orange Cheesecake", BigDecimal.valueOf(29990, 2), "cream cheese", "orange", "chocolate");		
-		em.persist(cake);
-		cakes.add(cake);
-		
-		CakeStore store = new CakeStore("Buttercup Bakery", "7 W.Well St., Neverland");
-		store.setCakes(cakes);
-		em.persist(store);
-		
-		
-		cakes = new LinkedList<Cake>();
-		cake = new Cake("Whiskey Pie", BigDecimal.valueOf(59990, 2), "12 yr. Aberlor Whiskey", "chocolate");
-		em.persist(cake);
-		cakes.add(cake);
-		
-		cake = new Cake("Cake Lie", BigDecimal.valueOf(0, 2), "testing");
-		em.persist(cake);
-		cakes.add(cake);
-		
-		cake = new Cake("Búček Cake", BigDecimal.valueOf(19990, 2), "meat");
-		em.persist(cake);
-		cakes.add(cake);
-		
-		store = new CakeStore("Aperture Bakery", "42 Meme Lane, Xanadu");
-		store.setCakes(cakes);
-		em.persist(store);
-	}
-	
+   @PersistenceContext
+   private EntityManager em;
+
+   @PostConstruct
+   public void initialize()
+   {
+      Manager admin = new Manager("admin", "admin", true);
+      em.persist(admin);
+      
+      Manager user1 = new Manager("manager1", "manager", false);
+      em.persist(user1);
+      
+      Manager user2 = new Manager("manager2", "manager", false);
+      em.persist(user2);
+      
+      List<Cake> cakes = new LinkedList<Cake>();
+      Cake cake = new Cake("Unconceivably Sweet Pie", BigDecimal.valueOf(19990, 2), "white flavor", "strawberry filling",
+            "lemon icing");
+      em.persist(cake);
+      cakes.add(cake);
+
+      cake = new Cake("Humperdinck's Favourite", BigDecimal.valueOf(29990, 2), "chocolate");
+      em.persist(cake);
+      cakes.add(cake);
+
+      cake = new Cake("Dread Pirate Pudding", BigDecimal.valueOf(29990, 2), "vanilla flavor");
+      em.persist(cake);
+      cakes.add(cake);
+
+      Bakery store = new Bakery("Buttercup Bakery", "7 W.Well St., Neverland", user1);
+      store.setCakes(cakes);
+      em.persist(store);
+
+      cakes = new LinkedList<Cake>();
+      cake = new Cake("Neurotoxin Pie", BigDecimal.valueOf(59990, 2), "love", "chocolate");
+      em.persist(cake);
+      cakes.add(cake);
+
+      cake = new Cake("Cake Lie", BigDecimal.valueOf(0, 2), "lots of testing");
+      em.persist(cake);
+      cakes.add(cake);
+
+      cake = new Cake("Companion Pie", BigDecimal.valueOf(19990, 2), "no artificial additives");
+      em.persist(cake);
+      cakes.add(cake);
+
+      store = new Bakery("Aperture Bakery", "42 Meme Lane, Xanadu", user2);
+      store.setCakes(cakes);
+      em.persist(store);
+   }
+
 }

@@ -6,19 +6,14 @@
 	xmlns:s="http://jboss.org/seam/faces"
 	template="/WEB-INF/templates/default.xhtml">
 	
-	
-	<ui:define name="header">
-		<f:metadata>
-        	<f:viewParam name="id" value="#{_storeid}"/>
-            <s:viewAction action="#{storeAction.edit(_storeid)}"/>
-        </f:metadata>
-	</ui:define>
-	
 	<ui:define name="content">
+	
+		<p><h:messages/></p>
+	
 		<h:form>
-			<h1><h:inputText value="#{cakeStore.name}"/></h1>
-			<p><h:inputText value="#{cakeStore.address}"/></p>
-			<h:dataTable value="#{cakeStore.cakes}" var="_cake">
+			<h1><h:inputText value="#{bakery.name}"/></h1>
+			<p><h:inputText value="#{bakery.address}"/></p>
+			<h:dataTable value="#{bakery.cakes}" var="_cake">
 			
 				<h:column>
 					<f:facet name="header">Name</f:facet>
@@ -38,7 +33,7 @@
             	</h:column>
 			</h:dataTable>
 			
-			<h:commandButton action="#{storeAction.save}" value="Save"/> 
+			<h:commandButton action="#{bakeryAction.save}" value="Save"/> 
 		</h:form>
 	</ui:define>
 </ui:composition>

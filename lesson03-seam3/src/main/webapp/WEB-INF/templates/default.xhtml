@@ -69,6 +69,13 @@
                it back to the community!
             </p>
          </div>
+         <div>
+            <h:panelGroup rendered="#{identity.loggedIn}">
+                <h:form>
+                Logged in as #{identity.user.id} <h:commandButton action="#{identity.logout}" value="Logout"/>.
+                </h:form>
+            </h:panelGroup>
+         </div>
          <ui:insert name="content">
                     [Template content will be inserted here]
                 </ui:insert>
