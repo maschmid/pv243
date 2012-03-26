@@ -14,9 +14,4 @@
             <class>org.jboss.seam.security.SecurityInterceptor</class>
         </interceptors>
         
-        <!-- 
-        <interceptors>
-      		<class>org.jboss.seam.transaction.TransactionInterceptor</class>
-   		</interceptors>
-   		-->
 </beans>
