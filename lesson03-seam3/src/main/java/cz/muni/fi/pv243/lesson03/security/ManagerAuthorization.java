@@ -24,6 +24,15 @@ public class ManagerAuthorization
       if (!identity.isLoggedIn()) {
          return false;
       }
+            
+      if (isAdmin(identity)) {
+         return true;
+      }
+      
+      // Only admins can edit non-assigned bakeries
+      if (bakery.getManager() == null) {
+         return false;
+      }
       
       return identity.getUser().getId().equals(bakery.getManager().getId());
    }

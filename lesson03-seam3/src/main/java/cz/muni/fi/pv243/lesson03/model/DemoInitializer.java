@@ -7,13 +7,9 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
-import javax.inject.Inject;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
-import org.jboss.seam.persistence.FlushModeManager;
-import org.jboss.seam.persistence.FlushModeType;
 
 @Singleton
 @Startup
@@ -22,14 +18,9 @@ public class DemoInitializer
    @PersistenceContext
    private EntityManager em;
    
-   @Inject
-   FlushModeManager flushModeManager;
-   
    @PostConstruct
    public void initialize()
-   {
-      flushModeManager.setFlushModeType(FlushModeType.MANUAL);
-      
+   {      
       Manager admin = new Manager("admin", "admin", true);
       em.persist(admin);
       

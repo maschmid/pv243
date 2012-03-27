@@ -3,6 +3,7 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:s="http://jboss.org/seam/faces"
 	template="/WEB-INF/templates/default.xhtml">
 	<ui:define name="content">
 		<h1>Bakeries</h1>
@@ -23,6 +24,13 @@
             	</h:column>
             	
             	<h:column>
+            	   <f:facet name="header">
+            	       Manager
+            	   </f:facet>
+            	   #{_bakery.manager.username}
+            	</h:column>
+            	
+            	<h:column>
 
 					<h:commandButton action="#{bakeryAction.edit}" value="Edit">
 						<f:setPropertyActionListener target="#{currentBakeryProducer.bakery}" value="#{_bakery}"/>
@@ -30,6 +38,16 @@
                 	
             	</h:column>
 			</h:dataTable>
+
+            <h:panelGroup rendered="#{identity.user.admin}">
+                <h3>Create new Bakery</h3>
+                <div>
+                    <h:outputLabel for="newBakeryName" value="Name" />
+                    <h:inputText id="newBakeryName" value="#{newBakery.name}" />
+                    
+                    <h:commandButton action="#{newBakeryAction.createBakery}" value="Create Bakery" />
+                </div>
+            </h:panelGroup>
 			
 		</h:form>
 	</ui:define>

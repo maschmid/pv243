@@ -7,6 +7,10 @@
    <PROCESS-ITEM-OUTPUT ID=":#{bakeryAction.edit}:#edit.xhtml"
     NAME="output" PATH="/edit.xhtml" TARGET="rules:#edit.xhtml"
     TITLE="#{bakeryAction.edit}:[any]" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{newBakeryAction.createBakery}:#edit.xhtml" NAME="output1"
+    PATH="/edit.xhtml" TARGET="rules:#edit.xhtml"
+    TITLE="#{newBakeryAction.createBakery}:[any]" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#edit.xhtml" PATH="/edit.xhtml"
@@ -15,6 +19,10 @@
    <PROCESS-ITEM-OUTPUT ID=":#{bakeryAction.save}:#bakerylist.xhtml"
     NAME="output" PATH="/bakerylist.xhtml"
     TARGET="rules:#bakerylist.xhtml" TITLE="#{bakeryAction.save}:[any]" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID=":#{bakeryAction.cancel}:#bakerylist.xhtml"
+    NAME="output1" PATH="/bakerylist.xhtml"
+    TARGET="rules:#bakerylist.xhtml"
+    TITLE="#{bakeryAction.cancel}:[any]" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#register.xhtml" PATH="/register.xhtml"

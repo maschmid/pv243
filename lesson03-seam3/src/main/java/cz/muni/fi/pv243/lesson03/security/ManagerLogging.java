@@ -9,7 +9,7 @@ import org.jboss.solder.logging.Logger;
 public class ManagerLogging {
 	
 	public void addLoginSuccessMessage(@Observes LoggedInEvent event, Logger log, Messages messages) {
-		log.info("User" + event.getUser().getId() + " logged in");
-		messages.add(messages.info("User " + event.getUser().getId() + " logged in"));
+		log.info("User " + event.getUser().getId() + " logged in");
+		messages.add(messages.info("You are now logged in as " + event.getUser().getId() + "."));
     }
 }

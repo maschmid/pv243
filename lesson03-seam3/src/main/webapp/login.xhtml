@@ -9,15 +9,18 @@
 	<ui:define name="content">
 		<h1>Login</h1>
 		<h:form>
-		  <div>
+		  <h:panelGrid columns="2">
 		      <h:outputLabel value="Username" for="username"/>
 		      <h:inputText id="username" value="#{credentials.username}" />
-		  </div>
-		  <div>
+		  
 		      <h:outputLabel value="Password" for="password" />
 		      <h:inputSecret id="password" value="#{credentials.password}"/>
-		  </div>
+		  </h:panelGrid>
 		  <h:commandButton action="#{identity.login}" value="Login" />
+		  
+		  <div>
+		      The default username/passwords: manager1/manager, manager2/manager, admin/admin
+		  </div>
 		</h:form>
 	</ui:define>
 </ui:composition>

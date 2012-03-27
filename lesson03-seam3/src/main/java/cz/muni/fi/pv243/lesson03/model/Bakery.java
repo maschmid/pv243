@@ -1,6 +1,7 @@
 package cz.muni.fi.pv243.lesson03.model;
 
 import java.io.Serializable;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -83,6 +84,9 @@ public class Bakery implements Serializable
    @OneToMany(fetch = FetchType.LAZY)
    public List<Cake> getCakes()
    {
+      if (cakes == null) {
+         cakes = new LinkedList<Cake>();
+      }
       return cakes;
    }
 
