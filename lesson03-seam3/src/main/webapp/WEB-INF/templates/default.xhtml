@@ -75,11 +75,6 @@
                 Logged in as #{identity.user.id} <h:commandButton action="#{identity.logout}" value="Logout"/>.
                 </h:form>
             </h:panelGroup>
-            <h:panelGroup rendered="#{!identity.loggedIn}">                
-                <h:form>
-                    Username: <h:inputText value="#{credentials.username}" /> Password: <h:inputSecret value="#{credentials.password}" /> <h:commandButton action="#{identity.login}" value="Login" />
-                </h:form>
-            </h:panelGroup>
          </div>
          <ui:insert name="content">
                     [Template content will be inserted here]

@@ -7,16 +7,11 @@ import javax.persistence.EntityManager;
 
 import org.jboss.seam.faces.context.conversation.Begin;
 import org.jboss.seam.faces.context.conversation.End;
-import org.jboss.seam.security.Identity;
-import org.jboss.solder.exception.control.ExceptionHandled;
-
-import cz.muni.fi.pv243.lesson03.model.Bakery;
 
 @Named
 @Stateless
 public class BakeryAction
 {
-   
    @Inject
    private EntityManager em;
    
@@ -24,16 +19,8 @@ public class BakeryAction
    public void edit()
    {
    }
-   
-   @Inject
-   Identity identity;
-   
-   @Inject
-   @Current
-   Bakery bakery;
 
    @End
-   @ExceptionHandled
    public void save()
    {
       em.flush();
