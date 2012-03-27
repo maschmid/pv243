@@ -1,0 +1,28 @@
+<factorypath> 
+    <factorypathentry kind="EXTJAR" id="/home/maschmid/Documents/pv243/dora/pv243/lesson03-seam3/target/classes " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/javax/enterprise/cdi-api/1.0-SP4/cdi-api-1.0-SP4.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.1_spec/1.0.0.Final/jboss-interceptors-api_1.1_spec-1.0.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/spec/javax/faces/jboss-jsf-api_2.0_spec/1.0.0.Final/jboss-jsf-api_2.0_spec-1.0.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/spec/javax/annotation/jboss-annotations-api_1.1_spec/1.0.0.Final/jboss-annotations-api_1.1_spec-1.0.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_1.1_spec/1.0.0.Final/jboss-jaxrs-api_1.1_spec-1.0.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/spec/javax/ejb/jboss-ejb-api_3.1_spec/1.0.1.Final/jboss-ejb-api_3.1_spec-1.0.1.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/solder/solder-api/3.1.0.Final/solder-api-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/solder/solder-logging/3.1.0.Final/solder-logging-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/solder/solder-tooling/3.1.0.Final/solder-tooling-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/logging/jboss-logging-generator/1.0.0.CR3/jboss-logging-generator-1.0.0.CR3.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/seam/faces/seam-faces-api/3.1.0.Final/seam-faces-api-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/seam/international/seam-international-api/3.1.0.Final/seam-international-api-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/seam/persistence/seam-persistence-api/3.1.0.Final/seam-persistence-api-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/seam/transaction/seam-transaction-api/3.1.0.Final/seam-transaction-api-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/seam/security/seam-security/3.1.0.Final/seam-security-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/seam/security/seam-security-api/3.1.0.Final/seam-security-api-3.1.0.Final.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/picketlink/idm/picketlink-idm-api/1.5.0.Alpha02/picketlink-idm-api-1.5.0.Alpha02.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/picketlink/idm/picketlink-idm-spi/1.5.0.Alpha02/picketlink-idm-spi-1.5.0.Alpha02.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/picketlink/idm/picketlink-idm-core/1.5.0.Alpha02/picketlink-idm-core-1.5.0.Alpha02.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/picketlink/idm/picketlink-idm-common/1.5.0.Alpha02/picketlink-idm-common-1.5.0.Alpha02.jar " enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/ocpsoft/prettyfaces-jsf2/3.3.2/prettyfaces-jsf2-3.3.2.jar " enabled="true" runInBatchMode="false"/>
+</factorypath> 
