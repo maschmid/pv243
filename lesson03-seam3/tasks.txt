@@ -1,0 +1,33 @@
+
+1. Configure Hello bean in seam-beans.xml
+
+    s:modifies
+    xmlns:java:...
+
+2. viewconfig (urlrewrite)  + - redirect to denied page if viewed bakery doesn't exist
+
+    @UrlMapping
+
+    faces-config.xml
+    
+
+
+- authenticator + login form 
+
+- admin authenticator in ManagerAuthorization
+ 
+- Log who edited which bakery in BakeryAction
+
+- ExceptionHandlers / ExceptionHandled merge
+
+- ManagerLogging (logged in event)
+
+-ismanagerof  authorization
+
+-validator (passwords)
+
+-. viewconfig (urlrewrite)
+
+- redirect to denied page if viewed bakery doesn't exist
+
+
