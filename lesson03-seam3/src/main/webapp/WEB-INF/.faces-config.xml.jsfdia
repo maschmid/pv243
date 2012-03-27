@@ -12,10 +12,20 @@
  <PROCESS-ITEM NAME="rules:#edit.xhtml" PATH="/edit.xhtml"
   SHAPE="336,144,50,25" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:#edit.xhtml:0" NAME="item" PATH="/edit.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT
-    ID="success:#{bakeryAction.save}:#bakerylist.xhtml" NAME="output"
-    PATH="/bakerylist.xhtml" TARGET="rules:#bakerylist.xhtml"
-    TITLE="#{bakeryAction.save}:success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID=":#{bakeryAction.save}:#bakerylist.xhtml"
+    NAME="output" PATH="/bakerylist.xhtml"
+    TARGET="rules:#bakerylist.xhtml" TITLE="#{bakeryAction.save}:[any]" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#register.xhtml" PATH="/register.xhtml"
+  SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#register.xhtml:0" NAME="item"
+   PATH="/register.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID=":#{registerAction.create}:#index.xhtml"
+    NAME="output" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{registerAction.create}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="240,257,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
