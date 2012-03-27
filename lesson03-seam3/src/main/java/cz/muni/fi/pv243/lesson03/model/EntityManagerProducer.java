@@ -1,4 +1,4 @@
-package cz.muni.fi.pv243.lesson03.action;
+package cz.muni.fi.pv243.lesson03.model;
 
 import javax.enterprise.context.ConversationScoped;
 import javax.enterprise.inject.Produces;
@@ -7,7 +7,7 @@ import javax.persistence.PersistenceUnit;
 
 import org.jboss.solder.core.ExtensionManaged;
 
-public class Producers {
+public class EntityManagerProducer {
 	@ExtensionManaged
 	@Produces
 	@PersistenceUnit

@@ -9,7 +9,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 
-import cz.muni.fi.pv243.lesson03.model.Bakery;
 import cz.muni.fi.pv243.lesson03.model.Manager;
 
 @Stateless

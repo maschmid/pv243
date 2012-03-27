@@ -1,12 +1,6 @@
 package cz.muni.fi.pv243.lesson03.action;
 
-import java.io.Serializable;
-
-import javax.annotation.PostConstruct;
-import javax.ejb.Stateful;
 import javax.ejb.Stateless;
-import javax.enterprise.context.ConversationScoped;
-import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;

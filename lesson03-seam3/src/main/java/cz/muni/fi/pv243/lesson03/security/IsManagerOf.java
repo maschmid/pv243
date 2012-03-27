@@ -1,10 +1,7 @@
 package cz.muni.fi.pv243.lesson03.security;
 
-import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
-
-import javax.inject.Qualifier;
 
 import org.jboss.seam.security.annotations.SecurityBindingType;
 

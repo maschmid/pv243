@@ -1,7 +1,6 @@
 package cz.muni.fi.pv243.lesson03.viewconfig;
 
 import org.jboss.seam.faces.event.PhaseIdType;
-import org.jboss.seam.faces.rewrite.FacesRedirect;
 import org.jboss.seam.faces.rewrite.UrlMapping;
 import org.jboss.seam.faces.security.AccessDeniedView;
 import org.jboss.seam.faces.security.LoginView;
