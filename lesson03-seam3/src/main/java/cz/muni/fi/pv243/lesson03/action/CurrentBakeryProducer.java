@@ -29,6 +29,14 @@ public class CurrentBakeryProducer implements Serializable {
 		this.bakery = em.find(Bakery.class, Long.parseLong(bakeryId));
 	}
 	
+	public String getBakeryById() {
+	   if (this.bakery == null) {
+	      return null;
+	   }
+	   
+	   return this.bakery.getId().toString();
+	}
+	
 	@Named
 	@Produces
 	@Current

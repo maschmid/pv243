@@ -36,4 +36,15 @@
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
   SHAPE="240,257,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#view.xhtml" PATH="/view.xhtml"
+  SHAPE="32,385,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#view.xhtml:0" NAME="item" PATH="/view.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{currentBakeryProducer.setBakeryById(_storeid)}:#denied.xhtml"
+    NAME="output" PATH="/denied.xhtml" TARGET="rules:#denied.xhtml"
+    TITLE="#{currentBakeryProducer.setBakeryById(_storeid)}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#denied.xhtml" PATH="/denied.xhtml"
+  SHAPE="240,401,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
